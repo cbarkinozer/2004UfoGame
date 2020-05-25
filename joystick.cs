@@ -47,7 +47,7 @@ public class joystick : MonoBehaviour
         if (touchStart)
         {
             Vector2 Offset = PointB - PointA;
-            Vector2 direction = Vector2.ClampMagnitude(Offset, 1.0f);
+            Vector2 direction = Vector2.ClampMagnitude(Offset, 1);
             MoveCharacter(direction*-1);// I dont know why
             Circle.transform.position = new Vector2(PointA.x + direction.x, PointA.y + direction.y) * -1;
 
