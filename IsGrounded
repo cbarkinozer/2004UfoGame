@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class IsGrounded : MonoBehaviour
+{
+    GameObject Player;
+    CharacterMove Character_Move;
+
+    private void Start()
+    {
+        Player = GameObject.Find("Player");
+        Character_Move = Player.GetComponent<CharacterMove>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("girmiyonmu lan buraya");
+            Character_Move.isGrounded = true;
+        }
+    }
+
+    /*
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Ground") {
+            Debug.Log("girmiyonmu peki lan buraya ");
+            Character_Move.isGrounded = false;
+        }
+        
+    }
+    */
+}
