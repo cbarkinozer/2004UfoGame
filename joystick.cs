@@ -11,6 +11,7 @@ public class joystick : MonoBehaviour
     private Vector2 PointB;
     public Transform Circle;
     public Transform OtherCircle;
+
     void Start()
     {
     
@@ -18,6 +19,9 @@ public class joystick : MonoBehaviour
 
     void Update()
     {
+        Vector2 camera = Camera.main.transform.position;
+
+
         if (Input.GetMouseButtonDown(0))// ekrana click yaoılınca
         {
 
