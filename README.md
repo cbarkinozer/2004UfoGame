@@ -1,2 +1,2 @@
 # 2004UfoGame
-Unity game c# scripts(2nd year).
+Unity game c# scripts(2th grade).
